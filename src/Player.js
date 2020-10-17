@@ -1,5 +1,5 @@
 import React from "react";
-import "Player.css";
+// import "Player.css";
 
 function Player() {
   return (
