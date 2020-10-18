@@ -1,0 +1,19 @@
+.sidebar {
+  /* border: 1px solid black; */
+
+  flex: 0.2;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-width: 230px;
+  /* use full height of scrren */
+  height: 100vh;
+  background-color: #040404;
+}
+
+.sidebar__logo {
+  margin-right: auto;
+  /* Keeps aspect ratio */
+  height: 70px;
+  padding: 10px;
+}
