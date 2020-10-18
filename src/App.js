@@ -11,7 +11,7 @@ const spotify = new SpotifyWebApi();
 
 function App() {
   // const [token, setToken] = useState(null);
-  const [{ user, token }, dispatch] = useDataLayerValue();
+  const [{ user, token, playlists }, dispatch] = useDataLayerValue();
 
   //Run code based on  a given condition
   useEffect(() => {
@@ -37,10 +37,10 @@ function App() {
         });
       });
 
-      s.getUserPlaylists().then((playlists) => {
+      spotify.getUserPlaylists().then((playlists) => {
         dispatch({
           type: "SET_PLAYLISTS",
-          playlists,
+          playlists: playlists,
         });
       });
     }
@@ -49,6 +49,7 @@ function App() {
 
   console.log("🧔", user);
   console.log("👽", token);
+  console.log("⏯️", playlists);
 
   return (
     <div className="app">
