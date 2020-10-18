@@ -36,6 +36,13 @@ function App() {
           user: user,
         });
       });
+
+      s.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists,
+        });
+      });
     }
     console.log("I have a token 👉 >>", token);
   }, []);
